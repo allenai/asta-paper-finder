@@ -1,0 +1,42 @@
+line-length = 120
+target-version = "py312"
+extend-exclude = [
+    ".idea",
+    ".venv",
+    ".vscode",
+    ".pytest_cache",
+    "*.egg-info",
+    "typings",
+]
+
+[lint]
+extend-select = ["ANN", "B", "I", "N"]
+ignore = [
+    "E731",   # Allow assignment of a lambda to a variable
+    "ANN204", # Allow omitting return type of __special__ methods
+    "ANN401", # Allow using Any type
+    "B904",   # Allow raising an exception in `except` block without `from`
+    "B905",   # Allow `zip()` without `strict` parameter
+    "B023",
+    "N817",   # Allow aliasing classes with acronyms
+]
+
+[lint.flake8-bugbear]
+extend-immutable-calls = [
+    "ai2i.config.ConfigValue",
+    "ai2i.common.utils.value.ValueNotSet.instance",
+    "ai2i.config.config_models.ConfigValue",
+    "ai2i.config.common.ValueNotSet.instance",
+    "fastapi.Depends",
+    "fastapi.params.Depends",
+    "fastapi.Query",
+    "fastapi.params.Query",
+    "ai2i.di.interface.require.DI.requires",
+    "ai2i.di.interface.require.DI.requires_by_name",
+    "ai2i.di.interface.require.DI.config",
+    "ai2i.di.DI.requires",
+    "ai2i.di.DI.requires_by_name",
+    "ai2i.di.DI.config",
+    "mabool.agents.utils.tool_calling.LLMDescription",
+    "ai2i.dcollection.interface.collection.TakeFirst",
+]

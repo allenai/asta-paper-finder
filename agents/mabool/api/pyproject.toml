@@ -1,0 +1,103 @@
+[project]
+name = "mabool-api"
+version = "0.1.0"
+requires-python = ">=3.12.8"
+readme = "../README.md"
+dependencies = [
+    "ai2i-chain",
+    "ai2i-common",
+    "ai2i-config",
+    "ai2i-dcollection",
+    "ai2i-di",
+    "anyio==4.6.2.post1",
+    "cachetools~=5.5.0",
+    "cohere~=5.13.4",
+    "fastapi~=0.115.6",
+    "json-logging~=1.3.0",
+    "langchain-community~=0.3.20",
+    "langchain~=0.3.22",
+    "mabwiser",
+    "pandas~=2.2.3",
+    "pydantic==2.10.4",
+    "semanticscholar",
+    "starlette~=0.41.0",
+    "uvicorn~=0.34.0",
+    "matplotlib~=3.10.3",
+    "tenacity~=9.1.2",
+    "greenlet~=3.1.1",
+    "gunicorn~=23.0.0",
+    "greenlet~=3.1.1",
+    "kneed>=0.8.5",
+    "langchain-core>=0.3.60",
+    "GitPython~=3.1.45",
+    "aiocache~=0.12.3",
+]
+
+[tool.uv]
+default-groups = ["types", "test", "tools"]
+
+[dependency-groups]
+types = [
+    "types-cachetools~=5.5.0.20240820",
+    "types-psutil~=6.1.0.20241221",
+    "types-pyyaml~=6.0.12.20241230",
+    "types-requests~=2.31.0.6",
+    "types-toml~=0.10.8.20240310",
+    "types-tqdm~=4.67.0.20241221",
+    "pandas-stubs~=2.2.3.241126",
+]
+test = [
+    "scikit-learn~=1.6.0",
+    "toml~=0.10.2",
+    "asgi-lifespan~=2.1.0",
+    "pytest-asyncio~=0.25.0",
+    "pytest-cov~=6.0.0",
+    "pytest-env~=1.1.5",
+    "pytest-xdist~=3.6.1",
+    "pytest~=8.3.4",
+    "pytest-snapshot~=0.9.0",
+    "pytest~=8.3.4",
+    "itsdangerous~=2.2.0",
+]
+tools = [
+    "ruff>=0.8.4",
+    "flake8>=7.1.1",
+    "pyright~=1.1.398",
+    "deptry~=0.23.0",
+]
+
+[tool.deptry]
+extend_exclude = [
+  ".*\\/test_.*\\.py",
+  ".*conftest.py",
+  ".*tests/utils.py",
+]
+
+[tool.deptry.per_rule_ignores]
+DEP002 = [
+    "ai2i-chain",
+    "ai2i-common",
+    "ai2i-config",
+    "ai2i-dcollection",
+    "ai2i-di",
+    "gunicorn",
+    "greenlet",
+]
+DEP003 = ["ai2i"]
+
+[tool.ruff]
+extend = "../../../ruff.toml"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mabool"]
+
+
+[tool.pyright]
+ignore = [
+    "typings"
+]
+

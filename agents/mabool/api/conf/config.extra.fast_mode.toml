@@ -1,0 +1,11 @@
+[default.fast_broad_search_agent]
+dense_top_k = 100
+snowball_snippets_top_k = 100
+s2_relevance_search_top_k = 50
+relevance_judgement_quota = 75
+
+[test.fast_broad_search_agent]
+dense_top_k = 2
+snowball_snippets_top_k = 2
+s2_relevance_search_top_k = 10
+relevance_judgement_quota = 30

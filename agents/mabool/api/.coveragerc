@@ -1,0 +1,16 @@
+[run]
+concurrency =
+    greenlet
+    thread
+omit =
+    # omit all tests
+    **/tests/*
+    # omit mabwiser (mostly external lib)
+    **/libs/**/*
+    mabool/api/mabool/utils/tracing/memory/*
+
+[report]
+exclude_lines =
+    pragma: not covered
+    # don't report on not covering function overload definitions
+    @overload

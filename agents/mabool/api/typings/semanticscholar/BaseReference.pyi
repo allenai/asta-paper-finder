@@ -1,0 +1,19 @@
+from _typeshed import Incomplete
+from semanticscholar.Paper import Paper as Paper
+from semanticscholar.SemanticScholarObject import (
+    SemanticScholarObject as SemanticScholarObject,
+)
+
+class BaseReference(SemanticScholarObject):
+    FIELDS: Incomplete
+    def __init__(self, data: dict) -> None: ...
+    @property
+    def contexts(self) -> list: ...
+    @property
+    def intents(self) -> list: ...
+    @property
+    def contextsWithIntent(self) -> list: ...
+    @property
+    def isInfluential(self) -> bool: ...
+    @property
+    def paper(self) -> Paper: ...

@@ -1,0 +1,87 @@
+[step_progress]
+
+[step_progress.conversation_agent]
+start_new_topic = "Starting a new query."
+refine = "Refining an earlier query."
+correct = "Attempting to correct an earlier query."
+work_harder = "Working hard on query."
+work_harder_previous = "Working harder on the previous query."
+getting_results = "Focusing on {range_desc}."
+getting_authors = "Looking at authors for {range_desc}."
+getting_titles = "Looking at titles for {range_desc}."
+getting_abstracts = "Looking at abstracts for {range_desc}."
+getting_years = "Looking at years for {range_desc}."
+getting_venues = "Looking at venues for {range_desc}."
+getting_citation_counts = "Looking at citation counts for {range_desc}."
+getting_relevance = "Looking at relevance for {range_desc}."
+getting_relevance_summaries = "Looking at relevance summaries for {range_desc}."
+finalizing_response = "Finalizing response."
+
+[step_progress.round_executor]
+new_topic = "Searching for new topic."
+refinement = "Refining previous query."
+correction = "Correcting previous query."
+work_harder = "Working harder on previous query."
+
+processing_request = "Processing request: _\"{query}\"_."
+initiating_work_harder= "Initiating work-harder request."
+finalizing = "Finalizing response."
+
+[step_progress.gather_user_needs]
+analyzing_request = "Analyzing request."
+
+[step_progress.search_by_authors]
+found_authors = "Found authors:\n{author_names}."
+could_not_find_authors = "Could not find authors."
+fetching = "Fetching papers from {author_names}."
+assessing = "Assessing papers for relevance."
+searching_for_papers_by_authors = "Searching for papers by authors."
+
+[step_progress.llm_suggest]
+received_n_suggestions = "Received {n} suggestions."
+asking_llm = "Asking an LLM for suggested papers."
+verifying = "Verifying the existence of {papers} on Semantic Scholar."
+
+[step_progress.broad_by_specific_paper_citation]
+could_not_find_paper = "Could not find a paper for _\"{extracted_name}\"_."
+attempting_to_associate = "Attempting to associate _\"{extracted_name}\"_ with a paper."
+attempting_fetch_citing = "Found papers:\n{paper_titles}.\n\nAttempting to fetch citing papers."
+
+[step_progress.broad_search_by_keyword]
+searching_s2 = "Searching Semantic Scholar for _\"{query}\"_."
+searching_by_keyword = "Searching by keyword."
+
+[step_progress.fast_broad_search]
+running_search = "Running keyword and semantic searches for _\"{content_query}\"_."
+rerank_docs = "Reranking candidate documents."
+judging_relevance = "Judging relevance of top documents."
+searching_for_papers = "Searching for papers."
+
+[step_progress.broad_search]
+apply_relevance_judgement = "Assessing relevance of snippets and documents."
+search_for_papers = "Searching for papers (deep-search mode)."
+
+[step_progress.dense]
+expanding_search_criteria = "Expanding search criteria for _\"{search_query}\"_."
+searching_using_expanded_criteria = "Searching using expanded criteria."
+running_similatiry_based_search = "Running similarity-based search"
+
+[step_progress.metadata_only]
+s2_metadata_search = "Performing Semantic Scholar metadata search."
+metadata_search = "Metadata search."
+
+[step_progress.specific_paper_by_name]
+looking_for_citations = "Looking for citations near _\"{extracted_name}\"_."
+attempting_to_locate = "Attempting to locate: _\"{extracted_content}\"_."
+searching_semantic_scholar = "Searching semantic scholar."
+
+[step_progress.specific_paper_by_title]
+attempting_to_fetch = "Attempting to fetch _\"{extracted_title}\"_."
+
+[step_progress.paper_finder]
+sorting_resultset = "Sorting result set."
+
+[step_progress.snowball]
+following_citations = "Following citations that were mentioned in relevant passages."
+looking_for_papers_that_cite = "Looking at papers that cite promising papers."
+looking_for_papers_cited = "Looking at papers that were cited by relevant papers."

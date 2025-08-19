@@ -1,0 +1,44 @@
+[response_texts]
+
+detailed_response_prefix = "This is what I searched for:"
+
+suggest_broad_followup = "You can either refine your query or start a new one."
+
+suggest_to_search_for_papers_about_topic = "Do you want me to search for papers about this topic instead?"
+
+work_harder_text = "You can ask me to \"**work harder**\" to run a more exhaustive search."
+
+generic_refusal_message = """
+I'm sorry, I can't currently search for these criteria, or maybe I didn't understand what you meant. I work best for searching papers based on their content. Can you please rephrase your request?"""
+
+error_response_text = "I'm sorry, I had some technical issues and could not fulfill your request."
+
+heavy_load_text = "I'm sorry, I'm experiencing heavy load right now, please try again later."
+
+an_error_occurred = "An error occurred while processing your request: {message}"
+
+chitchat_reply = "Sorry, I don't know how to respond to that."
+
+[response_texts.metadata_agent]
+
+could_not_find_in_s2 = "I couldn't find any results for this query in the Semantic Scholar index."
+try_alternative = " Perhaps try an alternative venue name?"
+notice_limit = "Please notice, these are the first {limit} papers that matched this criteria. I'm sorry but I could not fetch more."
+
+[response_texts.paper_finder_agent]
+anything_else = "Would you like to try anything else?"
+soft_rejection = "soft rejection due to '{refusal_type}' type of query"
+choice_explanation_prefix = "It seems the query would not benefit from a paper search, or is not fully supported. The user chose to"
+run_anyway = "{choice_explanation} run the paper search anyway."
+cancel = "{choice_explanation} cancel the search."
+
+[response_texts.refusal]
+similar_to = "I'm sorry I do not support similarity queries at this point. I will soon. For now, you can ask specifically about the content you want me to help you find."
+web_access = "I'm sorry I can not access the web. I can only search within the 200 million papers available in Semantic Scholar."
+not_paper_finding = "I'm not sure what paper search will help answer your query."
+affiliation = "It seems your query contains affiliation criteria which I do not support yet."
+author_id = "It seems your query contains author IDs criteria which I do not support yet."
+
+came_up = "This is the search I came up with:"
+should_run = "Should I run it?"
+yes_or_no = "Please answer with yes or no, as any other option is currently out of my scope."

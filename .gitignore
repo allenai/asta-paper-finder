@@ -1,0 +1,92 @@
+cache/
+agents/mabool/api/cache
+.idea/
+# IDE stuff
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+**/.DS_Store
+**/.vscode
+**/.idea
+**/mabool.db-shm
+**/mabool.db-wal
+
+# neovim stuff
+**/pyrightconfig.json
+**/.null-ls*
+
+# Python
+.venv/
+.venv
+__pycache__/
+**/.mypy_cache
+**/.pytest_cache
+*.pyc
+*.pyo
+*.pyd
+**/*.egg-info
+agents/mabool/api/Pipfile.lock
+
+# IPython and Jupyter Notebook
+.ipynb_checkpoints/
+.ipynb_checkpoints/*
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# API keys
+**/*api_key.txt
+**/*api_key.json
+**/*api-key.txt
+**/*api-key.json
+**/*key.json
+**/gcp-creds.json
+secret
+*secret*
+.secrets.*
+*.secrets.*
+**/secret
+.env.secret
+
+# data files
+**/async-state/**
+temp_data
+centrality_queries
+**/test_analyzed_results_dump.jsonl
+mabool.db
+mabool.db-journal
+mabool.db.lock
+
+# git worktrees
+branches/**
+
+# distribution files
+**/dist/
+**/build/
+agents/mabool/api/requirements.txt
+
+# profiling
+**/*.prof
+
+# coverage
+**/*.coverage
+**/*.coverage.*
+**/*,cover
+lcov.info
+
+# logs
+sqlAlchemy.log*
+vcr.log*
+server.log*
+
+# aider
+.aider*
+
+# plots
+**/plots/
+
+# devbox files
+**/.devbox/**

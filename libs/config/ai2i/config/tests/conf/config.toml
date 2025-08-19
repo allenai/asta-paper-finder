@@ -1,0 +1,6 @@
+[default]
+env = "test"
+
+[default.dense_agent]
+initial_top_k_per_query = 2
+reformulate_prompt_example_docs = 3

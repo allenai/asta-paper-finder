@@ -1,0 +1,74 @@
+[explain]
+
+[explain.metadata]
+time_same_year = " during {year}"
+time_range_start_and_end = " from {start} until {end}"
+time_range_start_only = " from {start}"
+time_range_end_only = " until {end}"
+time_range_prefix = "\t- Time-range:{time}"
+venue = "\t- Venue{s}: {items}"
+author = "\t- Author{s}: {items}"
+
+[explain.content]
+specific_paper_by_name = "- A paper with the alias: '{name}'{content_suffix}."
+specific_paper_by_title = "- A paper titled: '{title}'."
+papers_discussing = "- Papers discussing: *{content}*."
+relevance_criteria_header = "- Judged by the following relevance criteria:"
+criterion_format = "\t- *{name}*: {description}"
+fields_of_study_header = "- Fields of Study:"
+metadata_header = "- Metadata:"
+
+[explain.content_suffix]
+with_content = ", also discussing: {content}"
+
+[explain.domains]
+main_field = "\t- Main FoS: {field}"
+secondary_fields = "\t- Key Secondary FoS: {fields}"
+
+[explain.summary]
+no_results = "I didn't find papers matching your query."
+found_papers = "I found {paper_count} matching your query."
+potential_matches = "I found {paper_count} that potentially match your query."
+
+[explain.summary.perfect_matches]
+plural = "I found {count} papers that look like perfect matches"
+singular = "I found one paper that looks like a perfect match"
+
+[explain.summary.highly_relevant]
+plural = "{connector}{count} relevant ones"
+singular = "{connector}{count} that is relevant"
+
+[explain.summary.other_relevant]
+default = " and {others}"
+
+[explain.summary.no_perfect]
+intro = "While I didn't find a perfect match, I did find "
+highly_relevant_only_plural = "{count} relevant ones"
+highly_relevant_only_singular = "one that is relevant"
+potentially_relevant_plural = "{count} potentially relevant ones"
+potentially_relevant_singular = "one that is potentially relevant"
+and_others = " and {count} {others_label}"
+
+[explain.merged_summary.previous_search]
+perfect_plural = "Your previous search yielded {count} perfect matches."
+perfect_singular = "Your previous search yielded one perfect match."
+no_perfect = "Your previous search yielded no perfect matches."
+no_additional = " In this search I found no additional matches."
+
+[explain.merged_summary.potentially_relevant]
+singular = " I've also found one additional paper that potentially matches your query."
+plural = " I've also found {count} additional papers that potentially match your query."
+
+[explain.merged_summary]
+perfect_intro = " I've also found "
+
+[explain.merged_summary.perfect_matches]
+plural = "{count} additional papers that look like perfect matches"
+singular = "one additional paper that looks like a perfect match"
+
+[explain.merged_summary.no_perfect_matches]
+intro = "While I didn't find a perfect match in this search, I did find "
+more_highly_relevant_singular = "one additional paper that is relevant"
+more_highly_relevant_plural = "{count} additional relevant ones"
+more_potentially_relevant_singular = "one additional paper that is potentially relevant"
+more_potentially_relevant_plural = "{count} potentially relevant ones"

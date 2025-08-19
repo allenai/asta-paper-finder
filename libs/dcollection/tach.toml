@@ -1,0 +1,22 @@
+exclude = [
+    "**/*__pycache__",
+    "**/*egg-info",
+    "**/docs",
+    "**/tests",
+    "**/venv",
+]
+source_roots = [
+    ".",
+]
+
+[[interfaces]]
+expose = [
+    "[^.]*",
+]
+from = [
+    "ai2i.dcollection",
+]
+
+[[modules ]]
+path = "ai2i.dcollection"
+depends_on = []

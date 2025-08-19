@@ -1,0 +1,8 @@
+[sorting]
+
+[sorting.explanation]
+most_recent = "most-recent"
+earliest = "earliest"
+highly_cited = "highly-cited"
+least_cited = "least-cited"
+sorting_explanation = "Between relevant papers, {sorting_explanation} papers were prioritized due to explicit request."

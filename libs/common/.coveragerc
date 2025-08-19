@@ -1,0 +1,10 @@
+[run]
+omit =
+    # omit all tests
+    **/tests/*
+
+[report]
+exclude_lines =
+    pragma: not covered
+    # don't report on not covering function overload definitions
+    @overload

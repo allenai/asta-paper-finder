@@ -1,0 +1,16 @@
+[flake8]
+exclude =
+    .idea,
+    .pytest_cache,
+    .venv,
+    envs,
+    resources,
+    setup.py,
+    __pycache__,
+    config.py,
+
+[flake8:local-plugins]
+extension =
+    SST = stable_sort_checker:StableSortChecker
+paths =
+  . ./dev/python/flake8_plugins

@@ -1,0 +1,5 @@
+[default]
+log_max_length = 1048576
+
+[default.di]
+round_scope_timeout = 86400 # 24 hours

@@ -1,0 +1,97 @@
+[default]
+env = "dev"
+log_format = ""
+log_max_length = 1048576
+snowball_agent = { forward_top_k = 200, backward_top_k = 200, snippet_top_k = 200 }
+s2_api = { concurrency = 10, timeout = 20, total_papers_limit = 1000, total_citations_limit = 1000, retry_attempts = 5, max_seconds_to_wait = 30.0 }
+response_text_top_k = 10
+run_snowball_for_recent = true
+run_snowball_for_central = true
+cohere = { rerank_model_name = "rerank-english-v3.0" }
+assume_recent_and_central_first = true
+consider_original_order = false
+should_sort = true
+cache = { enabled = true, ttl = 600 }
+force_deterministic = false
+enable_llm_cache = false
+operative_timeout = 86400
+show_api_swagger = true
+time_to_wait_for_results = 0
+
+[default.di]
+round_scope_timeout = 86400 # 24 hours
+
+[default.llm_abstraction]
+gpt4o_default_model = "gpt-4o-2024-11-20"
+gpt4turbo_default_model = "gpt-4-turbo"
+gpt4_default_model = "gpt-4-0125-preview"
+claude37sonnet_default_model = "claude-3-7-sonnet-20250219"
+gemini2flash_default_model = "gemini-2.0-flash"
+temparature = 1.0
+n = 1
+batch_max_concurrency = 1
+
+[default.vespa]
+concurrency = 10
+timeout = 60
+
+[default.dense_agent]
+formulation_model_name = "google:gemini2flash-default"
+initial_queries_to_formulate = 5
+initial_top_k_per_query = 250
+reformulate_prompt_num_queries = 5
+reformulate_prompt_example_docs = 3
+reformulate_top_k = 250
+dense_agent_max_iterations = 2
+
+[default.broad_search_agent]
+max_iterations = 3
+llm_n_suggestions = 5
+
+[default.relevance_judgement]
+relevance_model_name = "google:gemini2flash-default"
+openai_concurrency = 75
+quota = 250
+highly_relevant_cap = 50
+window_size = 20
+initial_batch_size = 20
+uniform_preload_size = 5
+decay_factor = 0.95
+batch_growth_factor = 2
+plot = false
+optimal_solution = false
+keep_irrelevant_docs = false
+
+[default.query_analyzer_agent]
+llm_abstraction_model_name = "google:gemini2flash-default"
+force_broad = false
+
+[default.metadata_planner_agent]
+llm_model_name = "openai:gpt4o-default"
+ops_max_concurrency = 50
+
+[default.broad_search_by_keyword_agent]
+results_limit = 50
+extra_results_factor = 4
+formulation_model_name = "google:gemini2flash-default"
+
+[default.specific_paper_by_title_agent]
+llm_model_name = "google:gemini2flash-default"
+should_sort = false
+
+[default.specific_paper_by_name_agent]
+should_sort = false
+filter_threshold = 1.0
+
+[default.search_by_author_agent]
+llm_model_name = "google:gemini2flash-default"
+relevance_judgements_quota = 75
+limit_for_specific = 2
+limit_for_broad = 1000
+disambiguate_authors = false
+consider_profiles_per_author = 20
+
+[default.llm_suggestion_agent]
+llm_model_name = "google:gemini2flash-default"
+openai_concurrency = 75
+fallback_n_suggestions = 10

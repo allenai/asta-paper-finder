@@ -1,0 +1,20 @@
+[verbalize]
+authored_by = "Authored by {authors}."
+published_between = "Published between {start} and {end}."
+published_in_time = "Published in {start}."
+published_after = "Published after {start}."
+published_before = "Published before {end}."
+published_in_venues = "Published in {venues}."
+
+content_must_satisfy = "To be considered relevant, the paper's content must satisfy:"
+criterion_line = "* **{name}**: {description}"
+nice_to_have = "It would be nice if the paper's content satisfies:"
+
+specific_paper = "Look for a specific paper."
+set_of_papers = "Look for a set of papers."
+bullet = "* {item}"
+
+metadata_criteria_heading = "**Metadata criteria:**"
+content_criteria_heading = "**Content criteria:**"
+search_for = "Search for \"{content}\""
+this_is_how = "This is how I interpreted your request:"
