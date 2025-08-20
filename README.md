@@ -13,3 +13,22 @@ PaperFinder is our paper-seeking agent, which is intended to assist in locating 
 This code departs from the PaperFinder agent which is [deployed online](https://asta.allen.ai/) in the Asta project. The online agent has several abilities that are not supported by the agent in this repo (and which are not relevant for the AstaBench evaluation), such as the ability to handle multi-turn interaction with a user, to send user-friendly progress updates to a host environment, to maintain conversations over long periods of time and to show a graphical widget with the results. It also consults datasets and indices which are legal for us to use in the product but not in the public-facing API provided for AstaBench. The online agent also differs from this code in some of its configuration options, as evaluation setup differs from product setups (for example, in a product it is OK or even preferable to also show in the results papers that are ranked right after the relevant ones, to ask a user for clarifications, or to refuse some queries which seem out of scope, all of which are not advised in an evaluation setup). Finally, the online agent keeps updating regularly and is tightly integrated in the production environment. For this release we wanted a stable, consistent version, which focuses on the core capability of paper-finding given a single user query. We intend to release larger chunks of PaperFinder agent, in particular the multi-turn abilities, as they become more mature and stable, and as we have proper benchmarks for them.
 
 This code was created by cloning the internal PaperFinder repo and brutally removing the less-relevant sections mentioned above. 
+
+
+## How to run
+
+To run the agent, we launch a FastAPI server, either by executing the main Python application directly or by deploying it with Gunicorn. Once the server is running, we can interact with it using cURL from the command line or through the Swagger web interface.
+### Run the python script directly 
+```bash
+python agents/mabool/api/mabool/api/app.py
+```
+
+### Run the bash script
+```bash
+bash agents/mabool/api/mabool/api/dev.sh
+```
+
+### secrets file
+
+The agent requires multiple keys, which should be defined in a `.env.secret` file under `agents/mabool/api/conf`.
+The needed keys are: `OPENAI_API_KEY`, `S2_API_KEY`, `COHERE_API_KEY`, `GOOGLE_API_KEY`.
