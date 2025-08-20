@@ -28,6 +28,23 @@ python agents/mabool/api/mabool/api/app.py
 bash agents/mabool/api/mabool/api/dev.sh
 ```
 
+### API
+
+The `/api/2/rounds` POST API has the following arguments:
+
+```Json
+{
+  "paper_description": "string",
+  "operation_mode": "infer",
+  "inserted_before": "string",
+  "read_results_from_cache": false
+}
+```
+- paper_description (REQUIRED): The natural language paper-search description.
+- operation_mode (default="infer"): should be one of "infer", "fast" or "diligent". Currently "infer" and "fast" behave the same way, and initiate a fast search (~30 seconds) whereas the "diligent" mode does a more exhaustive fetching (~3 minutes).
+- inserted_before (default=None): an upper-bound date in the format of YYYY-MM-DD to limit the results
+- read_results_from_cache (default=False): We cache the results on disk, and allow returning the results if they are found in that file-based cache.
+
 ### secrets file
 
 The agent requires multiple keys, which should be defined in a `.env.secret` file under `agents/mabool/api/conf`.
