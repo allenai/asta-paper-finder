@@ -68,7 +68,7 @@ async def start_round(round_request: RoundRequest) -> Response:
     return create_json_response(
         await run_round_with_cache(
             round_request.paper_description,
-            round_request.anchor_corpus_ids,
+            [],
             round_request.operation_mode or "infer",
             cache_read=round_request.read_results_from_cache,
         )
