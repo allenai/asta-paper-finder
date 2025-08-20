@@ -11,9 +11,6 @@ from mabool.data_model.agent import AgentOperationMode
 
 class RoundRequest(BaseModel):
     paper_description: str = Field(description="A description of the set of papers you're looking for.")
-    anchor_corpus_ids: list[CorpusId] = Field(
-        default_factory=list, description="List of corpus ids that would be a good anchor for the user query."
-    )
     operation_mode: AgentOperationMode | None = Field(
         default="infer", description='The operation mode of the tool: "infer" | "fast" | "diligent"'
     )
