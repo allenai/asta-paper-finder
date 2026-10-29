@@ -21,7 +21,7 @@ types = [
     "microsoft-python-type-stubs",
 ]
 test = [
-    "brotli~=1.1.0",
+    "brotli~=1.2.1",
     "deepmerge==2.0",
     "python-dotenv~=1.0.1",
     "pytest-asyncio~=0.25.0",
